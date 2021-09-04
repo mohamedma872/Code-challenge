@@ -19,6 +19,7 @@
 		BB4119B326E4181600969B7D /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119B126E4181600969B7D /* Print.swift */; };
 		BB4119B426E4181600969B7D /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119B226E4181600969B7D /* ReachabilityHelper.swift */; };
 		BB4119B726E419D700969B7D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119B626E419D700969B7D /* BaseViewController.swift */; };
+		BB4119BA26E41A2C00969B7D /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119B926E41A2C00969B7D /* NetworkConstants.swift */; };
 		D08054FE080FC283D1309046 /* Pods_Coding_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1196EEF66D584FFBC6373EA7 /* Pods_Coding_ChallengeTests.framework */; };
 		E4DC0B82CDC7C77540A74180 /* Pods_Coding_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69856A6908889E251B786C0 /* Pods_Coding_Challenge.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		BB4119B126E4181600969B7D /* Print.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
 		BB4119B226E4181600969B7D /* ReachabilityHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityHelper.swift; sourceTree = "<group>"; };
 		BB4119B626E419D700969B7D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BB4119B926E41A2C00969B7D /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		C69856A6908889E251B786C0 /* Pods_Coding_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coding_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF36F09B48E6FD0D958113E6 /* Pods-Coding-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coding-ChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-Coding-ChallengeTests/Pods-Coding-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +137,7 @@
 		BB41197F26E3BF3F00969B7D /* Coding-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				BB4119B826E41A2C00969B7D /* Constants */,
 				BB4119B526E419D700969B7D /* Base */,
 				BB4119B026E4181600969B7D /* Helper */,
 				BB41198026E3BF3F00969B7D /* AppDelegate.swift */,
@@ -181,6 +184,14 @@
 				BB4119B626E419D700969B7D /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		BB4119B826E41A2C00969B7D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BB4119B926E41A2C00969B7D /* NetworkConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		DCA8BDE7C1AD9053B407C454 /* Frameworks */ = {
@@ -431,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB4119BA26E41A2C00969B7D /* NetworkConstants.swift in Sources */,
 				BB41198526E3BF3F00969B7D /* ViewController.swift in Sources */,
 				BB41198126E3BF3F00969B7D /* AppDelegate.swift in Sources */,
 				BB41198326E3BF3F00969B7D /* SceneDelegate.swift in Sources */,
