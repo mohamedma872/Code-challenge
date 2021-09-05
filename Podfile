@@ -17,6 +17,7 @@ pod 'RxCocoa'
   pod 'Sourcery'
   pod 'SwiftyMocky'
   pod 'ReachabilitySwift'
+  pod 'SwiftGen','~> 6.1'
   target 'Coding-ChallengeTests' do
     inherit! :search_paths
     # Pods for testing

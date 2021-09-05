@@ -12,7 +12,6 @@
 		BB41198326E3BF3F00969B7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB41198226E3BF3F00969B7D /* SceneDelegate.swift */; };
 		BB41198526E3BF3F00969B7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB41198426E3BF3F00969B7D /* ViewController.swift */; };
 		BB41198826E3BF3F00969B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB41198626E3BF3F00969B7D /* Main.storyboard */; };
-		BB41198A26E3BF4000969B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB41198926E3BF4000969B7D /* Assets.xcassets */; };
 		BB41198D26E3BF4000969B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB41198B26E3BF4000969B7D /* LaunchScreen.storyboard */; };
 		BB41199826E3BF4000969B7D /* Coding_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB41199726E3BF4000969B7D /* Coding_ChallengeTests.swift */; };
 		BB4119A326E3BF4000969B7D /* Coding_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119A226E3BF4000969B7D /* Coding_ChallengeUITests.swift */; };
@@ -40,6 +39,18 @@
 		BB4119EF26E4C1C100969B7D /* TaxiMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119EE26E4C1C100969B7D /* TaxiMapViewController.swift */; };
 		BB4119F126E4C27400969B7D /* TaxiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119F026E4C27400969B7D /* TaxiViewModel.swift */; };
 		BB4119F326E4C35600969B7D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119F226E4C35600969B7D /* BaseViewModel.swift */; };
+		BB4119F726E500D300969B7D /* TaxiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119F626E500D300969B7D /* TaxiListViewController.swift */; };
+		BB4119FB26E50F9A00969B7D /* TaxiMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119FA26E50F9A00969B7D /* TaxiMapViewModel.swift */; };
+		BB4119FD26E515B600969B7D /* TaxiMapViewController+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119FC26E515B600969B7D /* TaxiMapViewController+MapKit.swift */; };
+		BB411A0026E546D600969B7D /* CustomAnntionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB4119FE26E546D600969B7D /* CustomAnntionView.xib */; };
+		BB411A0126E546D600969B7D /* CustomAnntionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119FF26E546D600969B7D /* CustomAnntionView.swift */; };
+		BB411A0426E547FD00969B7D /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = BB411A0226E547FD00969B7D /* swiftgen.yml */; };
+		BB411A0B26E5488B00969B7D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BB411A0A26E5488B00969B7D /* .swiftlint.yml */; };
+		BB411A2926E56CB800969B7D /* HAMBURG.gpx in Resources */ = {isa = PBXBuildFile; fileRef = BB411A2626E56CB800969B7D /* HAMBURG.gpx */; };
+		BB411A2A26E56CB800969B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB411A2726E56CB800969B7D /* Assets.xcassets */; };
+		BB411A2C26E56CC200969B7D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB411A2E26E56CC200969B7D /* Localizable.strings */; };
+		BB411A3126E56D0300969B7D /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB411A2F26E56D0300969B7D /* strings.swift */; };
+		BB411A3226E56D0300969B7D /* assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB411A3026E56D0300969B7D /* assets.swift */; };
 		D08054FE080FC283D1309046 /* Pods_Coding_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1196EEF66D584FFBC6373EA7 /* Pods_Coding_ChallengeTests.framework */; };
 		E4DC0B82CDC7C77540A74180 /* Pods_Coding_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69856A6908889E251B786C0 /* Pods_Coding_Challenge.framework */; };
 /* End PBXBuildFile section */
@@ -74,7 +85,6 @@
 		BB41198226E3BF3F00969B7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BB41198426E3BF3F00969B7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB41198726E3BF3F00969B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BB41198926E3BF4000969B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB41198C26E3BF4000969B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB41198E26E3BF4000969B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB41199326E3BF4000969B7D /* Coding-ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coding-ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +117,18 @@
 		BB4119EE26E4C1C100969B7D /* TaxiMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiMapViewController.swift; sourceTree = "<group>"; };
 		BB4119F026E4C27400969B7D /* TaxiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiViewModel.swift; sourceTree = "<group>"; };
 		BB4119F226E4C35600969B7D /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		BB4119F626E500D300969B7D /* TaxiListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiListViewController.swift; sourceTree = "<group>"; };
+		BB4119FA26E50F9A00969B7D /* TaxiMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiMapViewModel.swift; sourceTree = "<group>"; };
+		BB4119FC26E515B600969B7D /* TaxiMapViewController+MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaxiMapViewController+MapKit.swift"; sourceTree = "<group>"; };
+		BB4119FE26E546D600969B7D /* CustomAnntionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomAnntionView.xib; sourceTree = "<group>"; };
+		BB4119FF26E546D600969B7D /* CustomAnntionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnntionView.swift; sourceTree = "<group>"; };
+		BB411A0226E547FD00969B7D /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		BB411A0A26E5488B00969B7D /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		BB411A2626E56CB800969B7D /* HAMBURG.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = HAMBURG.gpx; sourceTree = "<group>"; };
+		BB411A2726E56CB800969B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB411A2D26E56CC200969B7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BB411A2F26E56D0300969B7D /* strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
+		BB411A3026E56D0300969B7D /* assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = assets.swift; sourceTree = "<group>"; };
 		C69856A6908889E251B786C0 /* Pods_Coding_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coding_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF36F09B48E6FD0D958113E6 /* Pods-Coding-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coding-ChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-Coding-ChallengeTests/Pods-Coding-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +177,8 @@
 		BB41197426E3BF3F00969B7D = {
 			isa = PBXGroup;
 			children = (
+				BB411A0A26E5488B00969B7D /* .swiftlint.yml */,
+				BB411A0226E547FD00969B7D /* swiftgen.yml */,
 				BB41197F26E3BF3F00969B7D /* Coding-Challenge */,
 				BB41199626E3BF4000969B7D /* Coding-ChallengeTests */,
 				BB4119A126E3BF4000969B7D /* Coding-ChallengeUITests */,
@@ -177,6 +201,8 @@
 		BB41197F26E3BF3F00969B7D /* Coding-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				BB411A2426E56CB800969B7D /* Resources */,
+				BB411A1626E5685B00969B7D /* SwiftGenFolder */,
 				BB4119E126E437E700969B7D /* Modules */,
 				BB4119C326E41C1900969B7D /* Model */,
 				BB4119C226E41B7600969B7D /* Main */,
@@ -185,7 +211,6 @@
 				BB4119B526E419D700969B7D /* Base */,
 				BB4119B026E4181600969B7D /* Helper */,
 				BB4119C626E41D1100969B7D /* Networking */,
-				BB41198926E3BF4000969B7D /* Assets.xcassets */,
 				BB41198B26E3BF4000969B7D /* LaunchScreen.storyboard */,
 				BB41198E26E3BF4000969B7D /* Info.plist */,
 			);
@@ -326,7 +351,7 @@
 		BB4119E226E437F800969B7D /* TaxiList */ = {
 			isa = PBXGroup;
 			children = (
-				BB4119E426E4382600969B7D /* ViewModel */,
+				BB4119F826E50E5B00969B7D /* ViewModel */,
 				BB4119E326E4381F00969B7D /* View */,
 			);
 			path = TaxiList;
@@ -336,17 +361,9 @@
 			isa = PBXGroup;
 			children = (
 				BB4119E526E4445400969B7D /* Cell */,
+				BB4119F626E500D300969B7D /* TaxiListViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		BB4119E426E4382600969B7D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				BB4119EA26E45CFB00969B7D /* TaxiCellViewModel.swift */,
-				BB4119F026E4C27400969B7D /* TaxiViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BB4119E526E4445400969B7D /* Cell */ = {
@@ -361,6 +378,8 @@
 		BB4119EC26E4C15600969B7D /* TaxiMap */ = {
 			isa = PBXGroup;
 			children = (
+				BB411A0D26E5492200969B7D /* CustomAnnotation */,
+				BB4119F926E50F8200969B7D /* ViewModel */,
 				BB4119ED26E4C16400969B7D /* View */,
 			);
 			path = TaxiMap;
@@ -370,8 +389,62 @@
 			isa = PBXGroup;
 			children = (
 				BB4119EE26E4C1C100969B7D /* TaxiMapViewController.swift */,
+				BB4119FC26E515B600969B7D /* TaxiMapViewController+MapKit.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BB4119F826E50E5B00969B7D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BB4119F026E4C27400969B7D /* TaxiViewModel.swift */,
+				BB4119EA26E45CFB00969B7D /* TaxiCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BB4119F926E50F8200969B7D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BB4119FA26E50F9A00969B7D /* TaxiMapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BB411A0D26E5492200969B7D /* CustomAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				BB4119FF26E546D600969B7D /* CustomAnntionView.swift */,
+				BB4119FE26E546D600969B7D /* CustomAnntionView.xib */,
+			);
+			path = CustomAnnotation;
+			sourceTree = "<group>";
+		};
+		BB411A1626E5685B00969B7D /* SwiftGenFolder */ = {
+			isa = PBXGroup;
+			children = (
+				BB411A3026E56D0300969B7D /* assets.swift */,
+				BB411A2F26E56D0300969B7D /* strings.swift */,
+			);
+			path = SwiftGenFolder;
+			sourceTree = "<group>";
+		};
+		BB411A2426E56CB800969B7D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB411A2526E56CB800969B7D /* GPS */,
+				BB411A2726E56CB800969B7D /* Assets.xcassets */,
+				BB411A2E26E56CC200969B7D /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BB411A2526E56CB800969B7D /* GPS */ = {
+			isa = PBXGroup;
+			children = (
+				BB411A2626E56CB800969B7D /* HAMBURG.gpx */,
+			);
+			path = GPS;
 			sourceTree = "<group>";
 		};
 		DCA8BDE7C1AD9053B407C454 /* Frameworks */ = {
@@ -396,6 +469,8 @@
 				BB41197A26E3BF3F00969B7D /* Frameworks */,
 				BB41197B26E3BF3F00969B7D /* Resources */,
 				48B1966E7C9A60EF381AE6E8 /* [CP] Embed Pods Frameworks */,
+				BB411A0C26E548C500969B7D /* SwiftLint */,
+				BB411A1A26E56A2C00969B7D /* swiftgen */,
 			);
 			buildRules = (
 			);
@@ -493,9 +568,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB41198D26E3BF4000969B7D /* LaunchScreen.storyboard in Resources */,
-				BB41198A26E3BF4000969B7D /* Assets.xcassets in Resources */,
 				BB41198826E3BF3F00969B7D /* Main.storyboard in Resources */,
+				BB411A0B26E5488B00969B7D /* .swiftlint.yml in Resources */,
+				BB411A0026E546D600969B7D /* CustomAnntionView.xib in Resources */,
+				BB411A2C26E56CC200969B7D /* Localizable.strings in Resources */,
+				BB411A2926E56CB800969B7D /* HAMBURG.gpx in Resources */,
 				BB4119E926E4448C00969B7D /* TaxiTableViewCell.xib in Resources */,
+				BB411A2A26E56CB800969B7D /* Assets.xcassets in Resources */,
+				BB411A0426E547FD00969B7D /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +696,42 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BB411A0C26E548C500969B7D /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		BB411A1A26E56A2C00969B7D /* swiftgen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftgen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftGen/bin/swiftgen\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -632,20 +748,26 @@
 				BB4119BF26E41B3600969B7D /* UIViewController + Extension.swift in Sources */,
 				BB4119F326E4C35600969B7D /* BaseViewModel.swift in Sources */,
 				BB4119EB26E45CFB00969B7D /* TaxiCellViewModel.swift in Sources */,
+				BB4119FB26E50F9A00969B7D /* TaxiMapViewModel.swift in Sources */,
 				BB4119DD26E41D1100969B7D /* Router.swift in Sources */,
 				BB41198126E3BF3F00969B7D /* AppDelegate.swift in Sources */,
 				BB41198326E3BF3F00969B7D /* SceneDelegate.swift in Sources */,
 				BB4119D626E41D1100969B7D /* ParameterEncoding.swift in Sources */,
 				BB4119C526E41C2B00969B7D /* TaxiModel.swift in Sources */,
+				BB4119FD26E515B600969B7D /* TaxiMapViewController+MapKit.swift in Sources */,
 				BB4119B426E4181600969B7D /* ReachabilityHelper.swift in Sources */,
 				BB4119B326E4181600969B7D /* Print.swift in Sources */,
 				BB4119B726E419D700969B7D /* BaseViewController.swift in Sources */,
 				BB4119E826E4448C00969B7D /* TaxiTableViewCell.swift in Sources */,
+				BB4119F726E500D300969B7D /* TaxiListViewController.swift in Sources */,
+				BB411A0126E546D600969B7D /* CustomAnntionView.swift in Sources */,
 				BB4119EF26E4C1C100969B7D /* TaxiMapViewController.swift in Sources */,
 				BB4119D926E41D1100969B7D /* NetworkManager.swift in Sources */,
 				BB4119DC26E41D1100969B7D /* HTTPMethod.swift in Sources */,
 				BB4119D826E41D1100969B7D /* JSONParameterEncoder.swift in Sources */,
+				BB411A3226E56D0300969B7D /* assets.swift in Sources */,
 				BB4119C126E41B3600969B7D /* UIView+CornerRadius.swift in Sources */,
+				BB411A3126E56D0300969B7D /* strings.swift in Sources */,
 				BB4119F126E4C27400969B7D /* TaxiViewModel.swift in Sources */,
 				BB4119DA26E41D1100969B7D /* TaxiEndPoint.swift in Sources */,
 				BB4119DF26E41D1100969B7D /* EndPointType.swift in Sources */,
@@ -698,6 +820,14 @@
 				BB41198C26E3BF4000969B7D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BB411A2E26E56CC200969B7D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB411A2D26E56CC200969B7D /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,8 +51,79 @@
             </objects>
             <point key="canvasLocation" x="-7.2463768115942031" y="93.75"/>
         </scene>
+        <!--Taxi List View Controller-->
+        <scene sceneID="ZBl-Rh-BEu">
+            <objects>
+                <viewController id="NgA-XM-ZMd" customClass="TaxiListViewController" customModule="Coding_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vNY-su-Qxl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MZd-Pj-tTa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8jc-Pl-Pb1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MZd-Pj-tTa" firstAttribute="leading" secondItem="8jc-Pl-Pb1" secondAttribute="leading" id="4Gg-SK-r7w"/>
+                            <constraint firstItem="MZd-Pj-tTa" firstAttribute="bottom" secondItem="8jc-Pl-Pb1" secondAttribute="bottom" id="Mk5-lx-923"/>
+                            <constraint firstItem="MZd-Pj-tTa" firstAttribute="top" secondItem="8jc-Pl-Pb1" secondAttribute="top" id="NPR-rF-7RF"/>
+                            <constraint firstItem="MZd-Pj-tTa" firstAttribute="trailing" secondItem="8jc-Pl-Pb1" secondAttribute="trailing" id="YRF-Nv-XEw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TaxiTableView" destination="MZd-Pj-tTa" id="taG-AI-kn3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tzh-Hr-5Aw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679.71014492753625" y="93.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="etE-Lc-ur2">
+            <objects>
+                <viewController id="eqC-jC-Fre" sceneMemberID="viewController">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="DK5-FH-1ZM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A0y-Tx-qKs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCs-KH-Ndx" userLabel="UserLocation">
+                                <rect key="frame" x="338" y="788" width="40" height="40"/>
+                                <color key="backgroundColor" name="dodgerBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="InG-hf-wur"/>
+                                    <constraint firstAttribute="width" constant="40" id="TIZ-7J-Tjj"/>
+                                </constraints>
+                                <state key="normal" image="locationGpsOn2"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zbk-9y-szp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zbk-9y-szp" firstAttribute="trailing" secondItem="dCs-KH-Ndx" secondAttribute="trailing" constant="36" id="3FB-v3-aEe"/>
+                            <constraint firstItem="A0y-Tx-qKs" firstAttribute="trailing" secondItem="zbk-9y-szp" secondAttribute="trailing" id="7RC-T3-ard"/>
+                            <constraint firstItem="A0y-Tx-qKs" firstAttribute="leading" secondItem="zbk-9y-szp" secondAttribute="leading" id="Fsn-DP-ppi"/>
+                            <constraint firstItem="A0y-Tx-qKs" firstAttribute="top" secondItem="DK5-FH-1ZM" secondAttribute="top" id="JSM-Dk-5K2"/>
+                            <constraint firstItem="zbk-9y-szp" firstAttribute="bottom" secondItem="dCs-KH-Ndx" secondAttribute="bottom" constant="34" id="YJn-Me-plu"/>
+                            <constraint firstAttribute="bottom" secondItem="A0y-Tx-qKs" secondAttribute="bottom" id="gAJ-BF-RLT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vA9-SI-X2M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1393" y="94"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="locationGpsOn2" width="20" height="20"/>
+        <namedColor name="dodgerBlue">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -1,0 +1,14 @@
+strings:
+  inputs: Coding-Challenge/Resources/en.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: Coding-Challenge/SwiftGenFolder/strings.swift
+xcassets:
+  inputs:
+    - Coding-Challenge/Resources/Assets.xcassets
+
+  outputs:
+    - templateName: swift5
+      output: Coding-Challenge/SwiftGenFolder/assets.swift
+      
+

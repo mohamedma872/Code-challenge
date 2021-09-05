@@ -65,4 +65,16 @@ extension UIViewController {
             }))
             self.present(alert, animated: true, completion: nil)
         }
+    func alertWithCancle(title : String, message : String , complete :@escaping ()->Void,cancel :@escaping () -> Void) {
+
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (_) in
+            complete()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_: UIAlertAction!) in
+            cancel()
+        }))
+
+        self.present(alert, animated: true, completion: nil)
+    }
 }
