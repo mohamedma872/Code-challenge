@@ -39,6 +39,7 @@
 		BB4119EB26E45CFB00969B7D /* TaxiCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119EA26E45CFB00969B7D /* TaxiCellViewModel.swift */; };
 		BB4119EF26E4C1C100969B7D /* TaxiMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119EE26E4C1C100969B7D /* TaxiMapViewController.swift */; };
 		BB4119F126E4C27400969B7D /* TaxiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119F026E4C27400969B7D /* TaxiViewModel.swift */; };
+		BB4119F326E4C35600969B7D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119F226E4C35600969B7D /* BaseViewModel.swift */; };
 		D08054FE080FC283D1309046 /* Pods_Coding_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1196EEF66D584FFBC6373EA7 /* Pods_Coding_ChallengeTests.framework */; };
 		E4DC0B82CDC7C77540A74180 /* Pods_Coding_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69856A6908889E251B786C0 /* Pods_Coding_Challenge.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		BB4119EA26E45CFB00969B7D /* TaxiCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiCellViewModel.swift; sourceTree = "<group>"; };
 		BB4119EE26E4C1C100969B7D /* TaxiMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiMapViewController.swift; sourceTree = "<group>"; };
 		BB4119F026E4C27400969B7D /* TaxiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiViewModel.swift; sourceTree = "<group>"; };
+		BB4119F226E4C35600969B7D /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		C69856A6908889E251B786C0 /* Pods_Coding_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coding_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF36F09B48E6FD0D958113E6 /* Pods-Coding-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coding-ChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-Coding-ChallengeTests/Pods-Coding-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,6 +222,7 @@
 		BB4119B526E419D700969B7D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				BB4119F226E4C35600969B7D /* BaseViewModel.swift */,
 				BB4119B626E419D700969B7D /* BaseViewController.swift */,
 			);
 			path = Base;
@@ -627,6 +630,7 @@
 				BB4119D726E41D1100969B7D /* URLParameterEncoding.swift in Sources */,
 				BB4119C026E41B3600969B7D /* UIView+Border.swift in Sources */,
 				BB4119BF26E41B3600969B7D /* UIViewController + Extension.swift in Sources */,
+				BB4119F326E4C35600969B7D /* BaseViewModel.swift in Sources */,
 				BB4119EB26E45CFB00969B7D /* TaxiCellViewModel.swift in Sources */,
 				BB4119DD26E41D1100969B7D /* Router.swift in Sources */,
 				BB41198126E3BF3F00969B7D /* AppDelegate.swift in Sources */,
