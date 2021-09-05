@@ -20,7 +20,7 @@ struct PoiList: Codable {
     let id: Int?
     let coordinate: Coordinate?
     let state: State?
-    let type: TypeEnum
+    let type: TypeEnum?
     let heading: Double?
 }
 
@@ -31,6 +31,7 @@ struct Coordinate: Codable {
 
 enum State: String, Codable {
     case active = "ACTIVE"
+    case inActive = "INACTIVE"
 }
 
 enum TypeEnum: String, Codable {
