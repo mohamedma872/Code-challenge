@@ -21,10 +21,10 @@ class CustomAnnotationView : MKPinAnnotationView {
         let selectedLabel:UILabel = ccustomView.viewWithTag(101) as! UILabel
         selectedLabel.text = annotation?.title ?? "place"
         selectedLabel.textAlignment = .natural
-        //selectedLabel.backgroundColor = Asset.whiteThree.color
+        selectedLabel.backgroundColor = Asset.whiteThree.color
 
         selectedLabel.layer.masksToBounds = true
-        //selectedLabel.textColor = Asset.darkGreyBlue.color
+        selectedLabel.textColor = Asset.darkGreyBlue.color
         //selectedLabel.font = FontStyle.sfProTextBold12.FontFormat().withSize(10)
         ccustomView.frame = CGRect(x: 30, y: 0, width: 155, height: 35)
         self.addSubview(ccustomView)
@@ -48,26 +48,26 @@ extension TaxiMapViewController: MKMapViewDelegate, CLLocationManagerDelegate, U
             // do stuff
             setupMapView()
         }
-//        if status == .denied {
-//            self.alertWithCancle(title: L10n.validation, message: L10n.gpsValidation) { [weak self] in
-//                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
-//                    self?.presentHomeScreen()
-//                    return
-//                }
-//                if UIApplication.shared.canOpenURL(settingsUrl) {
-//                    UIApplication.shared.open(settingsUrl, completionHandler: {  [weak self] value in
-//                        guard value else {
-//                            self?.presentHomeScreen()
-//                            return
-//                        }
-//                        self?.setupLocation()
-//                    })
-//                }
-//
-//            } cancel: { [weak self] in
-//               // self?.presentHomeScreen()
-//            }
-//        }
+        if status == .denied {
+            self.alertWithCancle(title: L10n.validation, message: L10n.gpsValidation) { [weak self] in
+                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                    self?.coordinator?.start()
+                    return
+                }
+                if UIApplication.shared.canOpenURL(settingsUrl) {
+                    UIApplication.shared.open(settingsUrl, completionHandler: {  [weak self] value in
+                        guard value else {
+                            self?.coordinator?.start()
+                            return
+                        }
+                        self?.setupLocation()
+                    })
+                }
+
+            } cancel: { [weak self] in
+                self?.coordinator?.start()
+            }
+        }
     }
     func setupLocation() {
         if CLLocationManager.locationServicesEnabled() {
@@ -105,7 +105,7 @@ extension TaxiMapViewController: MKMapViewDelegate, CLLocationManagerDelegate, U
             self.takiMapView.showsUserLocation = true
             //                guard let location = self.locationManager.location?.coordinate else { return }
             
-            //for test
+            // for test
             let location = CLLocationCoordinate2D(latitude: 25.3511109, longitude: 55.4072837)
             
         
@@ -123,7 +123,7 @@ extension TaxiMapViewController: MKMapViewDelegate, CLLocationManagerDelegate, U
             guard let self = self else {return}
             let annotation = CustomPointAnnotation()
             annotation.coordinate = coordinate
-            //annotation.imageName = Asset.takiMarker.name
+            annotation.imageName = Asset.takiMarker.name
             self.takiMapView.addAnnotation(annotation)
         }
         
@@ -146,10 +146,9 @@ extension TaxiMapViewController: MKMapViewDelegate, CLLocationManagerDelegate, U
         let size = CGSize(width: 80, height: 80)
         guard annotation.coordinate.latitude != locationManager.location?.coordinate.latitude ?? 0.0 else {
             anView = CustomAnnotationView(annotation: annotation, reuseIdentifier: "test")
-            //anView?.image = UIImage(named: Asset.addressPin.name)
+            anView?.image = UIImage(named: Asset.takiMarker.name)
             anView?.sizeThatFits(size)
             return anView
-            return nil
         }
        
         

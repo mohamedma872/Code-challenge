@@ -10,7 +10,7 @@ import UIKit
 class TaxiTableViewCell: UITableViewCell {
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var stateLabel: UILabel!
-    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var taxiImg: UIImageView!
     var viewModel: TaxiCellViewModel? {
         didSet {
             bindViewmodel()
@@ -22,8 +22,14 @@ class TaxiTableViewCell: UITableViewCell {
     }
     
     func bindViewmodel() {
-        idLabel.text = "\(viewModel?.id ?? 0)"
-        stateLabel.text = viewModel?.status
-        typeLabel.text =  viewModel?.type
+        switch viewModel?.status {
+        case State.active.rawValue:
+            taxiImg.image = Asset.taxiActive.image
+        default:
+            taxiImg.image = Asset.taxiInactive.image
+        }
+        idLabel.text = L10n.taxiid + "\(viewModel?.id ?? 0)"
+        stateLabel.text = L10n.activationInfo + (viewModel?.status)! 
+       
     }
 }

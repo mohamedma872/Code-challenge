@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Coding_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Coding_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,7 +54,7 @@
         <!--Taxi List View Controller-->
         <scene sceneID="ZBl-Rh-BEu">
             <objects>
-                <viewController id="NgA-XM-ZMd" customClass="TaxiListViewController" customModule="Coding_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TaxiListViewController" id="NgA-XM-ZMd" customClass="TaxiListViewController" customModule="Coding_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vNY-su-Qxl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="679.71014492753625" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Taxi Map View Controller-->
         <scene sceneID="etE-Lc-ur2">
             <objects>
-                <viewController id="eqC-jC-Fre" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TaxiMapViewController" id="eqC-jC-Fre" customClass="TaxiMapViewController" customModule="Coding_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="DK5-FH-1ZM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

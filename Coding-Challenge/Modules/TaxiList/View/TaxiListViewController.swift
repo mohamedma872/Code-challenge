@@ -8,9 +8,9 @@
 import UIKit
 import RxSwift
 import RxCocoa
-class TaxiListViewController: UIViewController {
+class TaxiListViewController: UIViewController,Storyboarded  {
     @IBOutlet weak var TaxiTableView: UITableView!
-   // weak var coordinator: MainCoordinator?
+    weak var coordinator: MainCoordinator?
     let taxiTableViewCell = "TaxiTableViewCell"
     var viewModel : TaxiViewModel?
     let disposeBag = DisposeBag()

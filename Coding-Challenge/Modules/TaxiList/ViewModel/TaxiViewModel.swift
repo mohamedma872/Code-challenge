@@ -32,8 +32,10 @@ class TaxiViewModel : BaseViewModel {
     var CellsObservable: Observable<[TaxiTableViewCellType]>
 
     let onShowError = PublishSubject<String>()
-    func getTaxi(northLatitude: Double,eastLongitude
-                    : Double,southLatitude: Double,westLongitude: Double) {
+    func getTaxi(northLatitude: Double,
+                 eastLongitude: Double,
+                 southLatitude: Double,
+                 westLongitude: Double) {
         loadingBehavior.accept(true)
         networkInstance
             .getTaxi(northLatitude: northLatitude, eastLongitude: eastLongitude, southLatitude: southLatitude, westLongitude: westLongitude)
