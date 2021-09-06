@@ -8,10 +8,11 @@
 import UIKit
 import RxSwift
 import MapKit
-class TaxiMapViewController: BaseViewController {
+class TaxiMapViewController: BaseViewController ,Storyboarded {
     @IBOutlet weak var takiMapView: MKMapView!
     @IBOutlet weak var currentLocationButton: UIButton!
     var viewModel : TaxiMapViewModel?
+    weak var coordinator: MainCoordinator?
     let locationManager = CLLocationManager()
     var location: CLLocation!
     let disposeBag = DisposeBag()

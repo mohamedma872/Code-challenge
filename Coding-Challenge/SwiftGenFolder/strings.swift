@@ -10,8 +10,12 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  /// Activation Info :
+  internal static let activationInfo = L10n.tr("Localizable", "ActivationInfo")
   /// gps is required for using book a taxi so if you you don't opened gps you will not able to use this service
   internal static let gpsValidation = L10n.tr("Localizable", "GPSValidation")
+  /// Taxi ID : 
+  internal static let taxiid = L10n.tr("Localizable", "Taxiid")
   /// Validation
   internal static let validation = L10n.tr("Localizable", "Validation")
 }

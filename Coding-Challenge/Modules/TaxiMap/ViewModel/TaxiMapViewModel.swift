@@ -28,8 +28,10 @@ class TaxiMapViewModel : BaseViewModel {
     var markersObservable: Observable<[PoiList]>
 
     let onShowError = PublishSubject<String>()
-    func getTaxi(northLatitude: Double,eastLongitude
-                    : Double,southLatitude: Double,westLongitude: Double) {
+    func getTaxi(northLatitude: Double,
+                 eastLongitude: Double,
+                 southLatitude: Double,
+                 westLongitude: Double) {
         loadingBehavior.accept(true)
         networkInstance
             .getTaxi(northLatitude: northLatitude, eastLongitude: eastLongitude, southLatitude: southLatitude, westLongitude: westLongitude)

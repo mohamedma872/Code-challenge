@@ -51,6 +51,12 @@
 		BB411A2C26E56CC200969B7D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB411A2E26E56CC200969B7D /* Localizable.strings */; };
 		BB411A3126E56D0300969B7D /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB411A2F26E56D0300969B7D /* strings.swift */; };
 		BB411A3226E56D0300969B7D /* assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB411A3026E56D0300969B7D /* assets.swift */; };
+		BB7CCF9826E5753400CBC76B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CCF9226E5753400CBC76B /* AppCoordinator.swift */; };
+		BB7CCF9926E5753400CBC76B /* MainCoordinatorProctocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CCF9426E5753400CBC76B /* MainCoordinatorProctocol.swift */; };
+		BB7CCF9A26E5753400CBC76B /* StoryboardedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CCF9526E5753400CBC76B /* StoryboardedProtocol.swift */; };
+		BB7CCF9B26E5753400CBC76B /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CCF9626E5753400CBC76B /* CoordinatorProtocol.swift */; };
+		BB7CCF9C26E5753400CBC76B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CCF9726E5753400CBC76B /* MainCoordinator.swift */; };
+		BB7CCF9F26E5769F00CBC76B /* AppDelegate+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CCF9E26E5769F00CBC76B /* AppDelegate+Setup.swift */; };
 		D08054FE080FC283D1309046 /* Pods_Coding_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1196EEF66D584FFBC6373EA7 /* Pods_Coding_ChallengeTests.framework */; };
 		E4DC0B82CDC7C77540A74180 /* Pods_Coding_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69856A6908889E251B786C0 /* Pods_Coding_Challenge.framework */; };
 /* End PBXBuildFile section */
@@ -129,6 +135,12 @@
 		BB411A2D26E56CC200969B7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BB411A2F26E56D0300969B7D /* strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
 		BB411A3026E56D0300969B7D /* assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = assets.swift; sourceTree = "<group>"; };
+		BB7CCF9226E5753400CBC76B /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		BB7CCF9426E5753400CBC76B /* MainCoordinatorProctocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinatorProctocol.swift; sourceTree = "<group>"; };
+		BB7CCF9526E5753400CBC76B /* StoryboardedProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardedProtocol.swift; sourceTree = "<group>"; };
+		BB7CCF9626E5753400CBC76B /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		BB7CCF9726E5753400CBC76B /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		BB7CCF9E26E5769F00CBC76B /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
 		C69856A6908889E251B786C0 /* Pods_Coding_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coding_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF36F09B48E6FD0D958113E6 /* Pods-Coding-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coding-ChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-Coding-ChallengeTests/Pods-Coding-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,6 +213,8 @@
 		BB41197F26E3BF3F00969B7D /* Coding-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				BB7CCF9D26E5769F00CBC76B /* Dependencies */,
+				BB7CCF9126E5753400CBC76B /* Coordinator */,
 				BB411A2426E56CB800969B7D /* Resources */,
 				BB411A1626E5685B00969B7D /* SwiftGenFolder */,
 				BB4119E126E437E700969B7D /* Modules */,
@@ -445,6 +459,34 @@
 				BB411A2626E56CB800969B7D /* HAMBURG.gpx */,
 			);
 			path = GPS;
+			sourceTree = "<group>";
+		};
+		BB7CCF9126E5753400CBC76B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BB7CCF9226E5753400CBC76B /* AppCoordinator.swift */,
+				BB7CCF9326E5753400CBC76B /* protocol */,
+				BB7CCF9726E5753400CBC76B /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		BB7CCF9326E5753400CBC76B /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BB7CCF9426E5753400CBC76B /* MainCoordinatorProctocol.swift */,
+				BB7CCF9526E5753400CBC76B /* StoryboardedProtocol.swift */,
+				BB7CCF9626E5753400CBC76B /* CoordinatorProtocol.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		BB7CCF9D26E5769F00CBC76B /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				BB7CCF9E26E5769F00CBC76B /* AppDelegate+Setup.swift */,
+			);
+			path = Dependencies;
 			sourceTree = "<group>";
 		};
 		DCA8BDE7C1AD9053B407C454 /* Frameworks */ = {
@@ -739,6 +781,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB7CCF9826E5753400CBC76B /* AppCoordinator.swift in Sources */,
 				BB4119DE26E41D1100969B7D /* NetworkLogger.swift in Sources */,
 				BB4119DB26E41D1100969B7D /* HTTPTask.swift in Sources */,
 				BB4119BA26E41A2C00969B7D /* NetworkConstants.swift in Sources */,
@@ -749,10 +792,14 @@
 				BB4119F326E4C35600969B7D /* BaseViewModel.swift in Sources */,
 				BB4119EB26E45CFB00969B7D /* TaxiCellViewModel.swift in Sources */,
 				BB4119FB26E50F9A00969B7D /* TaxiMapViewModel.swift in Sources */,
+				BB7CCF9A26E5753400CBC76B /* StoryboardedProtocol.swift in Sources */,
 				BB4119DD26E41D1100969B7D /* Router.swift in Sources */,
 				BB41198126E3BF3F00969B7D /* AppDelegate.swift in Sources */,
+				BB7CCF9B26E5753400CBC76B /* CoordinatorProtocol.swift in Sources */,
 				BB41198326E3BF3F00969B7D /* SceneDelegate.swift in Sources */,
 				BB4119D626E41D1100969B7D /* ParameterEncoding.swift in Sources */,
+				BB7CCF9C26E5753400CBC76B /* MainCoordinator.swift in Sources */,
+				BB7CCF9F26E5769F00CBC76B /* AppDelegate+Setup.swift in Sources */,
 				BB4119C526E41C2B00969B7D /* TaxiModel.swift in Sources */,
 				BB4119FD26E515B600969B7D /* TaxiMapViewController+MapKit.swift in Sources */,
 				BB4119B426E4181600969B7D /* ReachabilityHelper.swift in Sources */,
@@ -767,6 +814,7 @@
 				BB4119D826E41D1100969B7D /* JSONParameterEncoder.swift in Sources */,
 				BB411A3226E56D0300969B7D /* assets.swift in Sources */,
 				BB4119C126E41B3600969B7D /* UIView+CornerRadius.swift in Sources */,
+				BB7CCF9926E5753400CBC76B /* MainCoordinatorProctocol.swift in Sources */,
 				BB411A3126E56D0300969B7D /* strings.swift in Sources */,
 				BB4119F126E4C27400969B7D /* TaxiViewModel.swift in Sources */,
 				BB4119DA26E41D1100969B7D /* TaxiEndPoint.swift in Sources */,

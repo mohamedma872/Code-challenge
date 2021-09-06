@@ -34,16 +34,20 @@ extension BaseNetworkManager{
 }
 // Implementing SOLID - Interface Segregation
 protocol TaxiNetworkProtocal : BaseNetworkManager {
-    func getTaxi(northLatitude: Double,eastLongitude
-                    : Double,southLatitude: Double,westLongitude: Double) -> Observable<TaxiModel?>
+    func getTaxi(northLatitude: Double,
+                 eastLongitude: Double,
+                 southLatitude: Double,
+                 westLongitude: Double) -> Observable<TaxiModel?>
    
     
 }
 struct TaxiNetworkManager : TaxiNetworkProtocal{
     var router : NetworkRouter = Router<TaxiApi>()
     static let environment : NetworkEnvironment = .production
-    func getTaxi(northLatitude: Double,eastLongitude
-                    : Double,southLatitude: Double,westLongitude: Double) -> Observable<TaxiModel?> {
+    func getTaxi(northLatitude: Double,
+                 eastLongitude: Double,
+                 southLatitude: Double,
+                 westLongitude: Double) -> Observable<TaxiModel?> {
         return Observable.create { observer -> Disposable in
             router.request(TaxiApi.getTaxi(northLatitude: northLatitude, eastLongitude: eastLongitude, southLatitude: southLatitude, westLongitude: westLongitude)) { data, response, error in
 
