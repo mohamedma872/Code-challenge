@@ -12,8 +12,16 @@ class ViewController: UIViewController,Storyboarded  {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        title = "Home"
     }
 
-
+    @IBAction func startListClicked(_ sender: UIButton) {
+        coordinator?.NavigateToTaxiList()
+        
+    }
+    @IBAction func startMapClicked(_ sender: UIButton) {
+        coordinator?.NavigateToTaxiMap()
+        
+    }
 }
 

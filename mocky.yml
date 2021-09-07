@@ -1,0 +1,24 @@
+
+sourceryCommand: null               # 1. (optional)
+sourceryTemplate: null              # 1. (optional)
+sources: # locations to scan
+  - ./Coding-Challenge
+  - ./Coding-ChallengeTests
+templates:
+  - ./Pods/SwiftyMocky/Sources/SwiftyMocky
+output:
+  ./Coding-Challenge/MocksGenerated # here Mock.generated.swift will be placed
+args: # additional arguments
+  testable: # assure @testable imports added
+    - Coding-Challenge
+  import: # assure all external imports for mocks
+    - RxSwift
+    - RxBlocking
+    - RxTest
+    - RxDataSources
+    - RxSwiftExt
+  excludedSwiftLintRules: # for lint users
+    - force_cast
+    - function_body_length
+    - line_length
+    - vertical_whitespace

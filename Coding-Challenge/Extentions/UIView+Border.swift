@@ -29,5 +29,8 @@ extension UIView {
         }
         
     }
-    
+    func circle() {
+        self.layer.cornerRadius = self.frame.height / 2
+        self.clipsToBounds = true
+    }
 }

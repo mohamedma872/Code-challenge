@@ -42,8 +42,6 @@
 		BB4119F726E500D300969B7D /* TaxiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119F626E500D300969B7D /* TaxiListViewController.swift */; };
 		BB4119FB26E50F9A00969B7D /* TaxiMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119FA26E50F9A00969B7D /* TaxiMapViewModel.swift */; };
 		BB4119FD26E515B600969B7D /* TaxiMapViewController+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119FC26E515B600969B7D /* TaxiMapViewController+MapKit.swift */; };
-		BB411A0026E546D600969B7D /* CustomAnntionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB4119FE26E546D600969B7D /* CustomAnntionView.xib */; };
-		BB411A0126E546D600969B7D /* CustomAnntionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4119FF26E546D600969B7D /* CustomAnntionView.swift */; };
 		BB411A0426E547FD00969B7D /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = BB411A0226E547FD00969B7D /* swiftgen.yml */; };
 		BB411A0B26E5488B00969B7D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BB411A0A26E5488B00969B7D /* .swiftlint.yml */; };
 		BB411A2926E56CB800969B7D /* HAMBURG.gpx in Resources */ = {isa = PBXBuildFile; fileRef = BB411A2626E56CB800969B7D /* HAMBURG.gpx */; };
@@ -57,6 +55,9 @@
 		BB7CCF9B26E5753400CBC76B /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CCF9626E5753400CBC76B /* CoordinatorProtocol.swift */; };
 		BB7CCF9C26E5753400CBC76B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CCF9726E5753400CBC76B /* MainCoordinator.swift */; };
 		BB7CCF9F26E5769F00CBC76B /* AppDelegate+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CCF9E26E5769F00CBC76B /* AppDelegate+Setup.swift */; };
+		BB7CCFA126E65AC000CBC76B /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CCFA026E65AC000CBC76B /* CustomAnnotationView.swift */; };
+		BB7CCFA326E6E16000CBC76B /* UIImage+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CCFA226E6E16000CBC76B /* UIImage+Rotate.swift */; };
+		BB7CCFA526E6E94F00CBC76B /* mocky.yml in Resources */ = {isa = PBXBuildFile; fileRef = BB7CCFA426E6E94F00CBC76B /* mocky.yml */; };
 		D08054FE080FC283D1309046 /* Pods_Coding_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1196EEF66D584FFBC6373EA7 /* Pods_Coding_ChallengeTests.framework */; };
 		E4DC0B82CDC7C77540A74180 /* Pods_Coding_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69856A6908889E251B786C0 /* Pods_Coding_Challenge.framework */; };
 /* End PBXBuildFile section */
@@ -126,8 +127,6 @@
 		BB4119F626E500D300969B7D /* TaxiListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiListViewController.swift; sourceTree = "<group>"; };
 		BB4119FA26E50F9A00969B7D /* TaxiMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiMapViewModel.swift; sourceTree = "<group>"; };
 		BB4119FC26E515B600969B7D /* TaxiMapViewController+MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaxiMapViewController+MapKit.swift"; sourceTree = "<group>"; };
-		BB4119FE26E546D600969B7D /* CustomAnntionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomAnntionView.xib; sourceTree = "<group>"; };
-		BB4119FF26E546D600969B7D /* CustomAnntionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnntionView.swift; sourceTree = "<group>"; };
 		BB411A0226E547FD00969B7D /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		BB411A0A26E5488B00969B7D /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		BB411A2626E56CB800969B7D /* HAMBURG.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = HAMBURG.gpx; sourceTree = "<group>"; };
@@ -141,6 +140,9 @@
 		BB7CCF9626E5753400CBC76B /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		BB7CCF9726E5753400CBC76B /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		BB7CCF9E26E5769F00CBC76B /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
+		BB7CCFA026E65AC000CBC76B /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
+		BB7CCFA226E6E16000CBC76B /* UIImage+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Rotate.swift"; sourceTree = "<group>"; };
+		BB7CCFA426E6E94F00CBC76B /* mocky.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = mocky.yml; sourceTree = "<group>"; };
 		C69856A6908889E251B786C0 /* Pods_Coding_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coding_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF36F09B48E6FD0D958113E6 /* Pods-Coding-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coding-ChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-Coding-ChallengeTests/Pods-Coding-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +191,7 @@
 		BB41197426E3BF3F00969B7D = {
 			isa = PBXGroup;
 			children = (
+				BB7CCFA426E6E94F00CBC76B /* mocky.yml */,
 				BB411A0A26E5488B00969B7D /* .swiftlint.yml */,
 				BB411A0226E547FD00969B7D /* swiftgen.yml */,
 				BB41197F26E3BF3F00969B7D /* Coding-Challenge */,
@@ -213,18 +216,19 @@
 		BB41197F26E3BF3F00969B7D /* Coding-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				BB7CCFA626E6EA0200CBC76B /* MocksGenerated */,
+				BB4119C226E41B7600969B7D /* Main */,
+				BB4119C626E41D1100969B7D /* Networking */,
+				BB4119B826E41A2C00969B7D /* Constants */,
 				BB7CCF9D26E5769F00CBC76B /* Dependencies */,
 				BB7CCF9126E5753400CBC76B /* Coordinator */,
 				BB411A2426E56CB800969B7D /* Resources */,
 				BB411A1626E5685B00969B7D /* SwiftGenFolder */,
 				BB4119E126E437E700969B7D /* Modules */,
 				BB4119C326E41C1900969B7D /* Model */,
-				BB4119C226E41B7600969B7D /* Main */,
 				BB4119BB26E41B3600969B7D /* Extentions */,
-				BB4119B826E41A2C00969B7D /* Constants */,
 				BB4119B526E419D700969B7D /* Base */,
 				BB4119B026E4181600969B7D /* Helper */,
-				BB4119C626E41D1100969B7D /* Networking */,
 				BB41198B26E3BF4000969B7D /* LaunchScreen.storyboard */,
 				BB41198E26E3BF4000969B7D /* Info.plist */,
 			);
@@ -281,6 +285,7 @@
 				BB4119BC26E41B3600969B7D /* UIViewController + Extension.swift */,
 				BB4119BD26E41B3600969B7D /* UIView+Border.swift */,
 				BB4119BE26E41B3600969B7D /* UIView+CornerRadius.swift */,
+				BB7CCFA226E6E16000CBC76B /* UIImage+Rotate.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -428,8 +433,7 @@
 		BB411A0D26E5492200969B7D /* CustomAnnotation */ = {
 			isa = PBXGroup;
 			children = (
-				BB4119FF26E546D600969B7D /* CustomAnntionView.swift */,
-				BB4119FE26E546D600969B7D /* CustomAnntionView.xib */,
+				BB7CCFA026E65AC000CBC76B /* CustomAnnotationView.swift */,
 			);
 			path = CustomAnnotation;
 			sourceTree = "<group>";
@@ -489,6 +493,13 @@
 			path = Dependencies;
 			sourceTree = "<group>";
 		};
+		BB7CCFA626E6EA0200CBC76B /* MocksGenerated */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MocksGenerated;
+			sourceTree = "<group>";
+		};
 		DCA8BDE7C1AD9053B407C454 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -531,6 +542,7 @@
 				BB41198F26E3BF4000969B7D /* Sources */,
 				BB41199026E3BF4000969B7D /* Frameworks */,
 				BB41199126E3BF4000969B7D /* Resources */,
+				3C18E176957ACBEFC611570D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -611,8 +623,8 @@
 			files = (
 				BB41198D26E3BF4000969B7D /* LaunchScreen.storyboard in Resources */,
 				BB41198826E3BF3F00969B7D /* Main.storyboard in Resources */,
+				BB7CCFA526E6E94F00CBC76B /* mocky.yml in Resources */,
 				BB411A0B26E5488B00969B7D /* .swiftlint.yml in Resources */,
-				BB411A0026E546D600969B7D /* CustomAnntionView.xib in Resources */,
 				BB411A2C26E56CC200969B7D /* Localizable.strings in Resources */,
 				BB411A2926E56CB800969B7D /* HAMBURG.gpx in Resources */,
 				BB4119E926E4448C00969B7D /* TaxiTableViewCell.xib in Resources */,
@@ -658,6 +670,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C18E176957ACBEFC611570D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coding-ChallengeTests/Pods-Coding-ChallengeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coding-ChallengeTests/Pods-Coding-ChallengeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coding-ChallengeTests/Pods-Coding-ChallengeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		48B1966E7C9A60EF381AE6E8 /* [CP] Embed Pods Frameworks */ = {
@@ -802,12 +831,12 @@
 				BB7CCF9F26E5769F00CBC76B /* AppDelegate+Setup.swift in Sources */,
 				BB4119C526E41C2B00969B7D /* TaxiModel.swift in Sources */,
 				BB4119FD26E515B600969B7D /* TaxiMapViewController+MapKit.swift in Sources */,
+				BB7CCFA326E6E16000CBC76B /* UIImage+Rotate.swift in Sources */,
 				BB4119B426E4181600969B7D /* ReachabilityHelper.swift in Sources */,
 				BB4119B326E4181600969B7D /* Print.swift in Sources */,
 				BB4119B726E419D700969B7D /* BaseViewController.swift in Sources */,
 				BB4119E826E4448C00969B7D /* TaxiTableViewCell.swift in Sources */,
 				BB4119F726E500D300969B7D /* TaxiListViewController.swift in Sources */,
-				BB411A0126E546D600969B7D /* CustomAnntionView.swift in Sources */,
 				BB4119EF26E4C1C100969B7D /* TaxiMapViewController.swift in Sources */,
 				BB4119D926E41D1100969B7D /* NetworkManager.swift in Sources */,
 				BB4119DC26E41D1100969B7D /* HTTPMethod.swift in Sources */,
@@ -815,6 +844,7 @@
 				BB411A3226E56D0300969B7D /* assets.swift in Sources */,
 				BB4119C126E41B3600969B7D /* UIView+CornerRadius.swift in Sources */,
 				BB7CCF9926E5753400CBC76B /* MainCoordinatorProctocol.swift in Sources */,
+				BB7CCFA126E65AC000CBC76B /* CustomAnnotationView.swift in Sources */,
 				BB411A3126E56D0300969B7D /* strings.swift in Sources */,
 				BB4119F126E4C27400969B7D /* TaxiViewModel.swift in Sources */,
 				BB4119DA26E41D1100969B7D /* TaxiEndPoint.swift in Sources */,
@@ -916,6 +946,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -977,8 +1008,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

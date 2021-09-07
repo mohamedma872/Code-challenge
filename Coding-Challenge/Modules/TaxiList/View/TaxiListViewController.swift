@@ -17,6 +17,7 @@ class TaxiListViewController: UIViewController,Storyboarded  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Taxi List"
         setupTableView()
         bindViewModel()
     }
