@@ -216,6 +216,7 @@
 		BB41197F26E3BF3F00969B7D /* Coding-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				BB411A1626E5685B00969B7D /* SwiftGenFolder */,
 				BB7CCFA626E6EA0200CBC76B /* MocksGenerated */,
 				BB4119C226E41B7600969B7D /* Main */,
 				BB4119C626E41D1100969B7D /* Networking */,
@@ -223,7 +224,6 @@
 				BB7CCF9D26E5769F00CBC76B /* Dependencies */,
 				BB7CCF9126E5753400CBC76B /* Coordinator */,
 				BB411A2426E56CB800969B7D /* Resources */,
-				BB411A1626E5685B00969B7D /* SwiftGenFolder */,
 				BB4119E126E437E700969B7D /* Modules */,
 				BB4119C326E41C1900969B7D /* Model */,
 				BB4119BB26E41B3600969B7D /* Extentions */,

@@ -1,7 +1,9 @@
 import UIKit
 import Swinject
 class AppCoordinator : Coordinator {
-    /*Dependency Injection Container is an object that knows how to instantiate and configure objects. DI Container is a design pattern to implement Dependency injection. One benefit of using it to resolve Complex dependency*/
+    // Dependency Injection Container is an object that knows how to
+    // instantiate and configure objects. DI Container is a design pattern to
+    // implement Dependency injection. One benefit of using it to resolve Complex dependency
     let container: Container
     
     var childCoordinators: [Coordinator] = []
