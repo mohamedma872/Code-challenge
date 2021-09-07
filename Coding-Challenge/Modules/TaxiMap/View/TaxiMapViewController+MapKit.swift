@@ -10,149 +10,94 @@ import UIKit
 import MapKit
 import RxSwift
 
-class CustomPointAnnotation: MKPointAnnotation {
-    var imageName: String!
-}
-class CustomAnnotationView : MKPinAnnotationView {
 
-    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
-        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-        let ccustomView = Bundle.main.loadNibNamed("CustomAnntionView", owner: self, options: nil)?.first as! UIView
-        let selectedLabel:UILabel = ccustomView.viewWithTag(101) as! UILabel
-        selectedLabel.text = annotation?.title ?? "place"
-        selectedLabel.textAlignment = .natural
-        selectedLabel.backgroundColor = Asset.whiteThree.color
-
-        selectedLabel.layer.masksToBounds = true
-        selectedLabel.textColor = Asset.darkGreyBlue.color
-        //selectedLabel.font = FontStyle.sfProTextBold12.FontFormat().withSize(10)
-        ccustomView.frame = CGRect(x: 30, y: 0, width: 155, height: 35)
-        self.addSubview(ccustomView)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-}
-
-extension TaxiMapViewController: MKMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
-    func locationManager(_ manager: CLLocationManager,
-                         didChangeAuthorization status: CLAuthorizationStatus){
-        if status == .authorizedAlways  {
-            // do stuff
-            setupMapView()
-        }
-        if status == .authorizedWhenInUse  {
-            
-            // do stuff
-            setupMapView()
-        }
-        if status == .denied {
-            self.alertWithCancle(title: L10n.validation, message: L10n.gpsValidation) { [weak self] in
-                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
-                    self?.coordinator?.start()
-                    return
-                }
-                if UIApplication.shared.canOpenURL(settingsUrl) {
-                    UIApplication.shared.open(settingsUrl, completionHandler: {  [weak self] value in
-                        guard value else {
-                            self?.coordinator?.start()
-                            return
-                        }
-                        self?.setupLocation()
-                    })
-                }
-
-            } cancel: { [weak self] in
-                self?.coordinator?.start()
-            }
-        }
-    }
-    func setupLocation() {
-        if CLLocationManager.locationServicesEnabled() {
-            switch CLLocationManager.authorizationStatus() {
-            case .notDetermined, .restricted, .denied:
-                locationManager.requestWhenInUseAuthorization()
-            case .authorizedAlways, .authorizedWhenInUse:
-                self.locationManager.startUpdatingLocation()
-                setupMapView()
-            @unknown default:
-                self.locationManager.startUpdatingLocation()
-                setupMapView()
-            }
-        } else {
-            print("Location services are not enabled")
-        }
-        
-    }
-    @IBAction func currentPositionClicked(_ sender: UIButton) {
-        locationManager.startUpdatingLocation()
-        if let coordinate = location?.coordinate
-        {
-            let center = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
-            let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-            let region = MKCoordinateRegion(center: center, span: span)
-            takiMapView.setRegion(region, animated: true)
-        }
-        
-    }
+extension TaxiMapViewController: MKMapViewDelegate, UIGestureRecognizerDelegate {
+   
+   
     func setupMapView() {
         locationManager.startUpdatingLocation()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
             guard let self = self else {return}
             self.takiMapView.delegate = self
             self.takiMapView.showsUserLocation = true
-            //                guard let location = self.locationManager.location?.coordinate else { return }
-            
-            // for test
-            let location = CLLocationCoordinate2D(latitude: 25.3511109, longitude: 55.4072837)
-            
-        
-            
-            let center = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
-            let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+            let center = CLLocationCoordinate2D(latitude: DEFAULT_HAMBURG_LOCATIONS.LATITUDE, longitude: DEFAULT_HAMBURG_LOCATIONS.LONGITUDE)
+            let span = MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)
             let region = MKCoordinateRegion(center: center, span: span)
-            self.takiMapView.setRegion(region, animated: true)// Change `2.0` to the desired number of
-            self.viewModel?.getTaxi(northLatitude: DEFAULT_HAMBURG_LOCATION_LIMITS.lat1, eastLongitude: DEFAULT_HAMBURG_LOCATION_LIMITS.lon1, southLatitude: DEFAULT_HAMBURG_LOCATION_LIMITS.lat2, westLongitude: DEFAULT_HAMBURG_LOCATION_LIMITS.lon2)
+            self.takiMapView.setRegion(region, animated: true)
+           
         }
        
     }
-    func addAnnotation(_ coordinate: CLLocationCoordinate2D) {
+    func addAnnotation(_ coordinate: CLLocationCoordinate2D,tittle: String,heading: String) {
         DispatchQueue.main.async { [weak self ] in
             guard let self = self else {return}
             let annotation = CustomPointAnnotation()
             annotation.coordinate = coordinate
             annotation.imageName = Asset.takiMarker.name
+            annotation.title = tittle
+            annotation.heading = heading
             self.takiMapView.addAnnotation(annotation)
         }
         
     }
+     func removeAnnotationsOnMap() {
+        DispatchQueue.main.async {
+            for annotation in self.takiMapView.annotations {
+            if !(annotation is MKUserLocation) {
+                self.takiMapView.removeAnnotation(annotation)
+            }
+        }
+        }
+     }
     // show current location and update location on map
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let currentlocation = locations.last else { return}
         location  = currentlocation
         
     }
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
-        var anView = mapView.dequeueReusableAnnotationView(withIdentifier: "test")
-        if anView == nil {
-            anView = MKAnnotationView(annotation: annotation, reuseIdentifier: "test")
-            anView?.canShowCallout = true
-        } else {
-            anView?.annotation = annotation
-        }
-        let size = CGSize(width: 80, height: 80)
-        guard annotation.coordinate.latitude != locationManager.location?.coordinate.latitude ?? 0.0 else {
-            anView = CustomAnnotationView(annotation: annotation, reuseIdentifier: "test")
-            anView?.image = UIImage(named: Asset.takiMarker.name)
-            anView?.sizeThatFits(size)
-            return anView
-        }
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        print("\(#function)")
+        self.viewModel?.getTaxi(northLatitude: mapView.northWestCoordinate.latitude, eastLongitude: mapView.southEastCoordinate.longitude, southLatitude: mapView.southEastCoordinate.latitude, westLongitude: mapView.northWestCoordinate.longitude)
        
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !annotation.isKind(of: MKUserLocation.self) else {
+            // Make a fast exit if the annotation is the `MKUserLocation`, as it's not an annotation view we wish to customize.
+            return nil
+        }
+        guard let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: CustomAnnotationView.identifier) as? CustomAnnotationView else { return nil }
+        let annotation = annotation as! CustomPointAnnotation
+        let image = Asset.takiMarker.image
+        let rotation = CGFloat(Double(annotation.heading)!/180 * Double.pi)
+        annotationView.image = image.rotate(radians: rotation)
+        annotationView.canShowCallout = true
+        annotationView.frame.size.height = 30
+        annotationView.frame.size.width = 30
+        let btn = UIButton(type: .detailDisclosure)
+        annotationView.rightCalloutAccessoryView = btn
+        annotationView.annotation = annotation
+        return annotationView
         
-        anView?.sizeThatFits(size)
-        return anView
+    }
+    
+   
+}
+extension MKMapView {
+    var northWestCoordinate: CLLocationCoordinate2D {
+        return MKMapPoint(x: visibleMapRect.minX, y: visibleMapRect.minY).coordinate
+    }
+    
+    var northEastCoordinate: CLLocationCoordinate2D {
+        return MKMapPoint(x: visibleMapRect.maxX, y: visibleMapRect.minY).coordinate
+    }
+    
+    var southEastCoordinate: CLLocationCoordinate2D {
+        return MKMapPoint(x: visibleMapRect.maxX, y: visibleMapRect.maxY).coordinate
+    }
+    
+    var southWestCoordinate: CLLocationCoordinate2D {
+        return MKMapPoint(x: visibleMapRect.minX, y: visibleMapRect.maxY).coordinate
     }
 }
+

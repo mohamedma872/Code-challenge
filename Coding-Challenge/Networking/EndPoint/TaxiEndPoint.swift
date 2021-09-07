@@ -50,7 +50,7 @@ extension TaxiApi: EndPointType {
         case .getTaxi(let northLatitude,let eastLongitude
                         ,let southLatitude,let westLongitude):
             params = ["p2Lat" : northLatitude,
-                      "p1Lon": eastLongitude, "p1Lat": southLatitude,"p2Lon":westLongitude]
+                      "p1Lon": westLongitude, "p1Lat": southLatitude,"p2Lon":eastLongitude]
        
         }
         switch self {

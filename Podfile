@@ -21,10 +21,16 @@ pod 'RxCocoa'
   target 'Coding-ChallengeTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxBlocking'
+    pod 'RxTest'
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'Swinject'
   end
 
   target 'Coding-ChallengeUITests' do
     # Pods for testing
+   
   end
 
 end

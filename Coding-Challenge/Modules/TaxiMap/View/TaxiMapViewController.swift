@@ -10,7 +10,6 @@ import RxSwift
 import MapKit
 class TaxiMapViewController: BaseViewController ,Storyboarded {
     @IBOutlet weak var takiMapView: MKMapView!
-    @IBOutlet weak var currentLocationButton: UIButton!
     var viewModel : TaxiMapViewModel?
     weak var coordinator: MainCoordinator?
     let locationManager = CLLocationManager()
@@ -19,7 +18,12 @@ class TaxiMapViewController: BaseViewController ,Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Taxi Map"
+        self.takiMapView.delegate = self
+        takiMapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: CustomAnnotationView.identifier)
+        setupMapView()
         bindViewModel()
+       
     }
   
    
@@ -51,13 +55,14 @@ class TaxiMapViewController: BaseViewController ,Storyboarded {
         guard  let viewmodel = viewModel else {
             return
         }
-       
         viewmodel.markersObservable.subscribe(onNext: { [weak self] vehicles in
             guard let self = self else {return}
-            for item in vehicles {
+            self.removeAnnotationsOnMap()
+            _ = vehicles.map({item in
                 let coordinate = CLLocationCoordinate2D(latitude: item.coordinate?.latitude ?? 0.0, longitude: item.coordinate?.longitude ?? 0.0)
-                self.addAnnotation(coordinate)
-            }
+                self.addAnnotation(coordinate,tittle: item.id?.description ?? "", heading: item.heading?.description ?? "")
+            })
+           
            
         }) .disposed(by: disposeBag)
     }

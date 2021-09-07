@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,33 +16,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxx-wh-bLl">
-                                <rect key="frame" x="46" y="381" width="337" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to IOS Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jG-4Y-slw">
+                                <rect key="frame" x="45" y="142" width="324" height="113"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="Xaz-Zl-4Sc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Start Journy , Click Here to start"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to IOS Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jG-4Y-slw">
-                                <rect key="frame" x="45" y="142" width="325" height="113"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="113" id="nmZ-uW-JGb"/>
+                                    <constraint firstAttribute="height" constant="113" id="xgh-4w-sz6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="nPZ-tr-eyN">
+                                <rect key="frame" x="39" y="379" width="336" height="102"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxx-wh-bLl">
+                                        <rect key="frame" x="0.0" y="0.0" width="336" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="dU9-Jk-vtZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="View Taxi List , Click Here to start"/>
+                                        <connections>
+                                            <action selector="startListClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eRS-be-Mly"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIC-rM-sRo">
+                                        <rect key="frame" x="0.0" y="60" width="336" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="qBY-Qd-0Rg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="View Taxi Map , Click Here to start"/>
+                                        <connections>
+                                            <action selector="startMapClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Evo-MR-8kz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="RpB-OC-uK2"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wxx-wh-bLl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="ClJ-sA-xq0"/>
-                            <constraint firstItem="7jG-4Y-slw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="NCw-a0-X1i"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wxx-wh-bLl" secondAttribute="bottom" constant="439" id="NeB-TS-Lkb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wxx-wh-bLl" secondAttribute="trailing" constant="31" id="dKd-G0-IPQ"/>
-                            <constraint firstItem="7jG-4Y-slw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98" id="hIj-66-ykF"/>
-                            <constraint firstItem="7jG-4Y-slw" firstAttribute="centerX" secondItem="wxx-wh-bLl" secondAttribute="centerX" constant="-7" id="l0h-VW-e1Y"/>
+                            <constraint firstItem="7jG-4Y-slw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1b5-xn-05R"/>
+                            <constraint firstItem="nPZ-tr-eyN" firstAttribute="top" secondItem="7jG-4Y-slw" secondAttribute="bottom" constant="124" id="9P8-cT-BZd"/>
+                            <constraint firstItem="7jG-4Y-slw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98" id="Ac9-Sb-1OK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nPZ-tr-eyN" secondAttribute="trailing" constant="39" id="FrK-fD-JiO"/>
+                            <constraint firstItem="nPZ-tr-eyN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="tw0-wf-GpW"/>
+                            <constraint firstItem="7jG-4Y-slw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="yS1-TZ-dam"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -91,28 +112,23 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A0y-Tx-qKs">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eqC-jC-Fre" id="ObE-8H-lRh"/>
+                                </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCs-KH-Ndx" userLabel="UserLocation">
-                                <rect key="frame" x="338" y="788" width="40" height="40"/>
-                                <color key="backgroundColor" name="dodgerBlue"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="InG-hf-wur"/>
-                                    <constraint firstAttribute="width" constant="40" id="TIZ-7J-Tjj"/>
-                                </constraints>
-                                <state key="normal" image="locationGpsOn2"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zbk-9y-szp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zbk-9y-szp" firstAttribute="trailing" secondItem="dCs-KH-Ndx" secondAttribute="trailing" constant="36" id="3FB-v3-aEe"/>
                             <constraint firstItem="A0y-Tx-qKs" firstAttribute="trailing" secondItem="zbk-9y-szp" secondAttribute="trailing" id="7RC-T3-ard"/>
                             <constraint firstItem="A0y-Tx-qKs" firstAttribute="leading" secondItem="zbk-9y-szp" secondAttribute="leading" id="Fsn-DP-ppi"/>
                             <constraint firstItem="A0y-Tx-qKs" firstAttribute="top" secondItem="DK5-FH-1ZM" secondAttribute="top" id="JSM-Dk-5K2"/>
-                            <constraint firstItem="zbk-9y-szp" firstAttribute="bottom" secondItem="dCs-KH-Ndx" secondAttribute="bottom" constant="34" id="YJn-Me-plu"/>
                             <constraint firstAttribute="bottom" secondItem="A0y-Tx-qKs" secondAttribute="bottom" id="gAJ-BF-RLT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="takiMapView" destination="A0y-Tx-qKs" id="fWW-SX-nD4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vA9-SI-X2M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,10 +136,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="locationGpsOn2" width="20" height="20"/>
-        <namedColor name="dodgerBlue">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

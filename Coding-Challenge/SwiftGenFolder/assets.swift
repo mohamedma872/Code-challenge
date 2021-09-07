@@ -24,6 +24,7 @@ internal enum Asset {
   internal static let accentColor = ColorAsset(name: "AccentColor")
   internal static let takiMarker = ImageAsset(name: "TakiMarker")
   internal static let darkGreyBlue = ColorAsset(name: "darkGreyBlue")
+  internal static let locationGpsOn2 = ImageAsset(name: "locationGpsOn2")
   internal static let taxiInactive = ImageAsset(name: "taxi_Inactive")
   internal static let taxiActive = ImageAsset(name: "taxi_active")
   internal static let whiteThree = ColorAsset(name: "whiteThree")
