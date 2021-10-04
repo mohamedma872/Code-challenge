@@ -24,7 +24,8 @@ pod 'RxCocoa'
     pod 'RxBlocking'
     pod 'RxTest'
     pod 'Quick'
-    pod 'Nimble'
+
+    
     pod 'Swinject'
   end
 

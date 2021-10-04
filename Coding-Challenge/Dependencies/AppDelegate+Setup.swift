@@ -12,7 +12,7 @@ extension AppDelegate {
     /**
      Set up the depedency graph in the DI container
      */
-     func setupDependencies() {
+   internal  func setupDependencies() {
      
         // services
         container.register(TaxiNetworkProtocal.self) { _ in TaxiNetworkManager()  }.inObjectScope(.container)

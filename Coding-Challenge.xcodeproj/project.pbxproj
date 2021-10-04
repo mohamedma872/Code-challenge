@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -49,6 +49,8 @@
 		BB411A2C26E56CC200969B7D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB411A2E26E56CC200969B7D /* Localizable.strings */; };
 		BB411A3126E56D0300969B7D /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB411A2F26E56D0300969B7D /* strings.swift */; };
 		BB411A3226E56D0300969B7D /* assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB411A3026E56D0300969B7D /* assets.swift */; };
+		BB483B6E26E703C100C58612 /* SpecLeaks in Frameworks */ = {isa = PBXBuildFile; productRef = BB483B6D26E703C100C58612 /* SpecLeaks */; };
+		BB483B7126E7040E00C58612 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = BB483B7026E7040E00C58612 /* Nimble */; };
 		BB7CCF9826E5753400CBC76B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CCF9226E5753400CBC76B /* AppCoordinator.swift */; };
 		BB7CCF9926E5753400CBC76B /* MainCoordinatorProctocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CCF9426E5753400CBC76B /* MainCoordinatorProctocol.swift */; };
 		BB7CCF9A26E5753400CBC76B /* StoryboardedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CCF9526E5753400CBC76B /* StoryboardedProtocol.swift */; };
@@ -160,6 +162,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB483B7126E7040E00C58612 /* Nimble in Frameworks */,
+				BB483B6E26E703C100C58612 /* SpecLeaks in Frameworks */,
 				D08054FE080FC283D1309046 /* Pods_Coding_ChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				BB411A1626E5685B00969B7D /* SwiftGenFolder */,
-				BB7CCFA626E6EA0200CBC76B /* MocksGenerated */,
 				BB4119C226E41B7600969B7D /* Main */,
 				BB4119C626E41D1100969B7D /* Networking */,
 				BB4119B826E41A2C00969B7D /* Constants */,
@@ -493,13 +496,6 @@
 			path = Dependencies;
 			sourceTree = "<group>";
 		};
-		BB7CCFA626E6EA0200CBC76B /* MocksGenerated */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MocksGenerated;
-			sourceTree = "<group>";
-		};
 		DCA8BDE7C1AD9053B407C454 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +546,10 @@
 				BB41199526E3BF4000969B7D /* PBXTargetDependency */,
 			);
 			name = "Coding-ChallengeTests";
+			packageProductDependencies = (
+				BB483B6D26E703C100C58612 /* SpecLeaks */,
+				BB483B7026E7040E00C58612 /* Nimble */,
+			);
 			productName = "Coding-ChallengeTests";
 			productReference = BB41199326E3BF4000969B7D /* Coding-ChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -605,6 +605,10 @@
 				Base,
 			);
 			mainGroup = BB41197426E3BF3F00969B7D;
+			packageReferences = (
+				BB483B6C26E703C100C58612 /* XCRemoteSwiftPackageReference "specleaks" */,
+				BB483B6F26E7040E00C58612 /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
 			productRefGroup = BB41197E26E3BF3F00969B7D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1198,6 +1202,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BB483B6C26E703C100C58612 /* XCRemoteSwiftPackageReference "specleaks" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/leandromperez/specleaks";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		BB483B6F26E7040E00C58612 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB483B6D26E703C100C58612 /* SpecLeaks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB483B6C26E703C100C58612 /* XCRemoteSwiftPackageReference "specleaks" */;
+			productName = SpecLeaks;
+		};
+		BB483B7026E7040E00C58612 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB483B6F26E7040E00C58612 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB41197526E3BF3F00969B7D /* Project object */;
 }
